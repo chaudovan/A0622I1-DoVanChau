@@ -1,120 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>taobangnangcao</title>
     <style>
-        * {
-            box-sizing: border-box;
+        td:nth-child(1) {
+            color: #ff3d11;
+        }
+        td:nth-child(7){
+            color: blueviolet;
+        }
+        table {
+            border-collapse: collapse;
         }
 
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            resize: vertical;
-        }
-
-        label {
-            padding: 12px 12px 12px 0;
-            display: inline-block;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
+        tr:nth-child(1), tr:nth-child(1) th {
+            background-color: #ffbc35  ;
+            border: 1px solid white;
             color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            float: right;
         }
 
-        input[type=submit]:hover {
-            background-color: #45a049;
+        tr:nth-child(2), tr:nth-child(2) th, tr:nth-child(2) td {
+            border: 1px solid white;
+            border-bottom: 3px solid gray;
         }
 
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
+        th, tr, td {
+            border: 3px solid gray;
+            padding: 15px;
         }
-
-        .col-25 {
-            float: left;
-            width: 25%;
-            margin-top: 6px;
-        }
-
-        .col-75 {
-            float: left;
-            width: 75%;
-            margin-top: 6px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 600px) {
-            .col-25, .col-75, input[type=submit] {
-                width: 100%;
-                margin-top: 0;
-            }
+        sub{
+            color: black;
         }
     </style>
 </head>
 <body>
-
-<h2>Responsive Form</h2>
-<p>Resize the browser window to see the effect. When the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other.</p>
-
-<div class="container">
-    <form action="/action_page.php">
-        <div class="row">
-            <div class="col-25">
-                <label for="fname">First Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="lname">Last Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="country">Country</label>
-            </div>
-            <div class="col-75">
-                <select id="country" name="country">
-                    <option value="australia">Australia</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-25">
-                <label for="subject">Subject</label>
-            </div>
-            <div class="col-75">
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-            </div>
-        </div>
-        <div class="row">
-            <input type="submit" value="Submit">
-        </div>
-    </form>
-</div>
+<h1 style="margin-left: 16%; color: blueviolet;font-size:60px ">Tháng 10 - October</h1>
+<table style="font-size: 40px">
+    <tr>
+        <th style="background-color: red">C.Nhật</th>
+        <th>T.Hai</th>
+        <th>T.Ba</th>
+        <th>T.Bốn</th>
+        <th>T.Năm</th>
+        <th>T.Sáu</th>
+        <th style="background-color: blueviolet">T.Bảy</th>
+    </tr>
+    <tr>
+        <td>Sun</td>
+        <td>Mon</td>
+        <td>Tue</td>
+        <td>Wed</td>
+        <td>Thu</td>
+        <td>Fri</td>
+        <td>Sat</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>1<sub>13</sub></td>
+        <td>2<sub>14</sub></td>
+        <td>3<sub>15</sub></td>
+    </tr>
+    <tr>
+        <td>4<sub>16</sub></td>
+        <td>5<sub>17</sub></td>
+        <td>6<sub>18</sub></td>
+        <td>7<sub>19</sub></td>
+        <td>8<sub>20</sub></td>
+        <td>9<sub>21</sub></td>
+        <td>10<sub>22</sub></td>
+    </tr>
+    <tr>
+        <td>11<sub>23</sub></td>
+        <td>12<sub>24</sub></td>
+        <td>13<sub>25</sub></td>
+        <td>14<sub>26</sub></td>
+        <td>15<sub>27</sub></td>
+        <td>16<sub>28</sub></td>
+        <td>17<sub>29</sub></td>
+    </tr>
+    <tr>
+        <td>18<sub>1</sub></td>
+        <td>19<sub>2</sub></td>
+        <td>20<sub>3</sub></td>
+        <td>21<sub>4</sub></td>
+        <td>22<sub>5</sub></td>
+        <td>23<sub>6</sub></td>
+        <td>24<sub>7</sub></td>
+    </tr>
+    <tr>
+        <td>25<sub>8</sub></td>
+        <td>26<sub>9</sub></td>
+        <td>27<sub>10</sub></td>
+        <td>28<sub>11</sub></td>
+        <td>28<sub>12</sub></td>
+        <td>30<sub>13</sub></td>
+        <td>31<sub>14</sub></td>
+    </tr>
+</table>
 
 </body>
 </html>

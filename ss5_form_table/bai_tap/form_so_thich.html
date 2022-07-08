@@ -2,7 +2,7 @@
 <html lang=en">
 <head>
     <meta charset="UTF-8">
-    <title>Bài tập 5.1</title>
+    <title>Form Sở Thích</title>
 </head>
 <style>
     h2{
@@ -10,23 +10,20 @@
         color: #cccccc;
         text-align: center;
     }
-    p {
 
-        text-align: center;
-    }
-    body{
-
-        text-align: center;
-    }
 
 </style>
 <body>
 <form>
     <h2 style="background: orange"  >SỞ THÍCH CỦA BẠN</h2>
-    <p>Họ và tên <input textbox="text"  /></p>
-    <p>Email <input textbox="text" /></p>
-    <p >
-        Sở thích
+    <p style="color: blue;font-size: 30px;margin-left: 20px">Họ và tên <input textbox="text"  /></p>
+    <p style="color: blue;font-size: 30px;margin-left: 66px">Email <input textbox="text" /></p>
+    <p>
+    <div style="display: flex; margin-left: 50px">
+        <p style="font-size: 30px;margin-top: 10px;color: blue">
+            Sở thích
+        </p>
+        <p style="margin-top: 20px;color: orange">
         <input name="hobby" value="travel" type="checkbox"/> Thể thao
         <input name="hobby" value="sport" type="checkbox"/> Âm nhạc
         <input name="hobby" value="cooking" type="checkbox"/> Đọc sách<br>
@@ -34,11 +31,12 @@
         <input name="hobby" value="cooking" type="checkbox"/> Chơi game
         <input name="hobby" value="cooking" type="checkbox"/> Điện ảnh<br>
         <input name="hobby" value="cooking" type="checkbox"/> Du lịch
-    </p>
-
+        </p>
+    </div>
+</p>
     <p>
-        <input type = "submit"  value="Gửi thông tin"/>
-        <input type = "reset" value="Nhập lại" />
+        <input style="margin-left: 150px" type = "submit"  value="Gửi thông tin"/>
+        <input  type = "reset" value="Nhập lại" />
     </p>
 
 </form>

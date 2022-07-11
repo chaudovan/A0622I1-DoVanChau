@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>From Currency</th>
+                <th>To Currency</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="number" name="tien" id="tien">
+                </td>
+                <td>
+                    <select>
+                        <option>Việt Nam</option>
+                        <option>USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>USD</option>
+                        <option>Việt Nam</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="chuyendoi();">Convert</button>
+                </td>
+            </tr>
+            <tr>
+                <td id ="hien" colspan="3" style="color: blue"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function chuyendoi() {
+            var a = parseInt(document.getElementById("tien").value);
+            var b = a*23000;
+            var c = a/23000;
+            //alert("Result : " +c  +" USD");
+            document.getElementById("hien").innerText="Result : " +c;
+        }
+    </script>
+</body>
+</html>

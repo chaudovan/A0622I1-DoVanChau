@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="so1" id="so1">
+        <input type="text" name="so2" id="so2"><br>
+        <button type="button" onclick="cong();">Addition(+)</button>
+        <button type="button" onclick="tru();">Subtraction(-)</button>
+        <button type="button" onclick="nhan();">Multiplication(x)</button>
+        <button type="button" onclick="chia();">Division(/)</button>
+        <p style="color: blue" id="hien"></p>
+    </form>
+    <script>
+        function cong() {
+            var a = parseInt(document.getElementById("so1").value);
+            var b = parseInt(document.getElementById("so2").value);
+            var c =a+b;
+            document.getElementById("hien").innerText = "Result Addition :" +c;
+        }
+        function tru() {
+            var a = parseInt(document.getElementById("so1").value);
+            var b = parseInt(document.getElementById("so2").value);
+            var c =a-b;
+            document.getElementById("hien").innerText = "Result Subtraction :" +c;
+        }
+        function nhan() {
+            var a = parseInt(document.getElementById("so1").value);
+            var b = parseInt(document.getElementById("so2").value);
+            var c =a*b;
+            document.getElementById("hien").innerText = "Result Multiplication :" +c;
+        }
+        function chia() {
+            var a = parseInt(document.getElementById("so1").value);
+            var b = parseInt(document.getElementById("so2").value);
+            var c =a/b;
+            document.getElementById("hien").innerText = "Result Division :" +c;
+        }
+
+    </script>
+</body>
+</html>

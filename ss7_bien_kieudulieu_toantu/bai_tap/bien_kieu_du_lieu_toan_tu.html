@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm Trung Bình</title>
+</head>
+<body>
+    <script>
+        let inputDiemLy;
+        let inputDiemToan;
+        let inputDiemHoa;
+        inputDiemLy =parseInt(prompt("Nhập Điểm Ly :"));
+        inputDiemToan =parseInt(prompt("Nhập Điểm Toan :"));
+        inputDiemHoa =parseInt(prompt("Nhập Điểm Hoa :"));
+
+        let  diemly=inputDiemLy;
+        let  diemtoan=inputDiemToan;
+        let  diemhoa=inputDiemHoa;
+        let dtb = (diemly + diemtoan + diemhoa)/3;
+        document.write("Điểm Lý  : " +diemly);
+        document.write("<br/>");
+        document.write("Điểm Toán  : " +diemtoan);
+        document.write("<br/>");
+        document.write("Điểm Hóa  : " +diemhoa);
+        document.write("<br/>");
+        document.write("Điểm trung bình của bạn  : " +dtb);
+    </script>
+</body>
+</html>

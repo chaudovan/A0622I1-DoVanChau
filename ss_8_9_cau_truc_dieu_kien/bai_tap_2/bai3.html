@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+<body>
+    <h2>Nhập cạnh hình vuông</h2>
+    <input type="number" name="" id="canh">
+    <input type="button" name="" onclick="hinhvuong()" value="Tính DT">
+    <p id="dt" style="color:darkblue"></p>
+</body>
+    <script>
+        function hinhvuong() {
+            let a = parseFloat(document.getElementById("canh").value);
+            let dt= a*a;
+            if(a>0){
+                document.getElementById("dt").innerText = "Diện tích hình vuông là : " + dt;
+            }else document.getElementById("dt").innerText = "Bạn đã nhập sai ";
+
+        }
+    </script>
+</body>
+</html>

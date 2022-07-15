@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+</head>
+<style>
+    table{
+        width: 10%;
+        height: 40%;
+    }
+</style>
+<body>
+    <form>
+        <input type="text" name="" id="ok" disabled>
+        <table>
+            <tr>
+                <td><input type="button" name="" id="button" value="1" onclick="tinhtoan('1')"></td>
+                <td><input type="button" name="" id="button" value="2" onclick="tinhtoan('2')"></td>
+                <td><input type="button" name="" id="button" value="3" onclick="tinhtoan('3')"></td>
+                <td><input type="button" name="" id="button" value="+" onclick="tinhtoan('+')"></td>
+
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="button" value="4" onclick="tinhtoan('4')"></td>
+                <td><input type="button" name="" id="button" value="5" onclick="tinhtoan('5')"></td>
+                <td><input type="button" name="" id="button" value="6" onclick="tinhtoan('6')"></td>
+                <td><input type="button" name="" id="button" value="-" style="width: 24px" onclick="tinhtoan('-')"></td>
+
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="button" value="7" onclick="tinhtoan('7')"></td>
+                <td><input type="button" name="" id="button" value="8" onclick="tinhtoan('8')"></td>
+                <td><input type="button" name="" id="button" value="9" onclick="tinhtoan('9')"></td>
+                <td><input type="button" name="" id="button" value="x" style="width: 24px" onclick="tinhtoan('*')"></td>
+
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="button" value="C" onclick="tinhtoan('C')"></td>
+                <td><input type="button" name="" id="button" value="0" onclick="tinhtoan('0')"></td>
+                <td><input type="button" name="" id="button" value="=" onclick="tong()"></td>
+                <td><input type="button" name="" id="button" value="/" style="width: 24px" onclick="tinhtoan('/')"></td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function tinhtoan(value) {
+        if(value=="C"){
+            document.getElementById("ok").value = "";
+        }else document.getElementById("ok").value += value;
+    }
+    function tong() {
+        let a = document.getElementById("ok").value;
+        let b = eval(a);
+        document.getElementById("ok").value = b;
+
+    }
+</script>
+</html>

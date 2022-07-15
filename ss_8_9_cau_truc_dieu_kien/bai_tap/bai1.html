@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+    <form>
+        <h3>Nhập số A :<input type="number" name="weight" id="soA"></h3>
+        <h3>Nhập Số B :<input type="number" name="height" id = "soB"></h3>
+        <p id = "result"></p>
+        <input type="button" onclick="tinh()" value="Kiểm tra" style="background-color: blue">
+        <script>
+            function tinh() {
+                let a = parseInt(document.getElementById("soA").value);
+                let b = parseInt(document.getElementById("soB").value);
+                if (a % b == 0) {
+                    document.getElementById("result").innerText = "A có chia hết cho B";
+                } else document.getElementById("result").innerText = "A không chia hết cho B";
+            }
+        </script>
+    </form>
+</body>
+</html>

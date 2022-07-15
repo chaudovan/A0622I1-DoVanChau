@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+    <form>
+        <h2>Nhập số phút đã gọi</h2>
+        <h3 id="b"></h3>
+        <h3 id="c"></h3>
+        <input type="number" name="" id="sophut">
+        <input type="button" name="" onclick="dienthoai()" value="Tính">
+
+    </form>
+    <script>
+        function dienthoai() {
+            let a = parseFloat(document.getElementById("sophut").value);
+            let VAT = 30000
+            let b;
+            if(a>300){
+                 b = (a-300)*200 + 200*400 + 100*600 + VAT;
+            }else if(a>100){
+                b=(a-100)*400 + 100*600 +VAT;
+            }else b=a*600 +VAT;
+            document.getElementById("b").innerText = "Số phút bạn đã gọi : " + a ;
+            document.getElementById("c").innerText = "Số tiền bạn phải trả là : " + b ;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <form>
+        <h2>Nhập doanh số bán hàng</h2>
+        <input type="number" name="" id="doanhso">
+        <input type="button" name="" onclick="chay()" value="Xem hoa hồng">
+        <p id="a"></p>
+    </form>
+    <script>
+        function chay() {
+            let b = parseFloat(document.getElementById("doanhso").value);
+            if(a<200000){
+                document.getElementById("a").innerText = "Thưởng 3% hoa hồng";
+            }else if(a<500000){
+                document.getElementById("a").innerText = "Thưởng 5% hoa hồng";
+            }else if(a<2000000){
+                document.getElementById("a").innerText = "Thưởng 10% hoa hồng";
+            }else document.getElementById("a").innerText = "Thưởng 15% hoa hồng";
+        }
+    </script>
+</body>
+</html>

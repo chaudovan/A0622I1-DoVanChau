@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diện tích hình vuông</title>
+</head>
+<body>
+    <h2>Nhập cạnh a</h2>
+    <input type="number" name="" id="canhA">
+    <h2>Nhập cạnh b</h2>
+    <input type="number" name="" id="canhB">
+    <input type="button" name="" onclick="dttamgiac()" value="DT TGV">
+    <h3 id="dttg"></h3>
+    <script>
+        function dttamgiac() {
+            let a = parseInt(document.getElementById("canhA").value);
+            let b = parseInt(document.getElementById("canhB").value);
+            let c = (a*b)/2;
+            if(a>0 && b>0){
+                document.getElementById("dttg").innerText = "Diện tích hình chữ nhật là : " + c;
+            }else document.getElementById("dttg").innerText = "Bạn phải nhập cạnh a và b là số dương";
+        }
+    </script>
+</body>
+</html>

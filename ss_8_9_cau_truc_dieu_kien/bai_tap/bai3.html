@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+    <form>
+        <h3>Nhập số bạn muốn : <input type="text" name="" id="2"></h3>
+        <p id="hien"></p>
+        <input type="button" name="" onclick="chay()" value="kiểm tra" style="background-color: #ffbc35">
+    </form>
+    <script>
+        function chay() {
+            let a = parseInt(document.getElementById("2").value);
+            if (a >0) {
+                document.getElementById("hien").innerText = a + " là số lớn hơn 0 ";
+            } else if(a<0){
+                document.getElementById("hien").innerText = a + " la số nhỏ hơn 0 ";
+            }else document.getElementById("hien").innerText = a + " là số không ";
+        }
+    </script>
+</body>
+</html>

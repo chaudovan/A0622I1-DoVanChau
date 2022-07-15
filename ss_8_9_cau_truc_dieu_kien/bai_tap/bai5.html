@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td><h4>Nhập điểm kiểm tra :</h4></td>
+                <td><input type="number" name="" id="kiemtra"></td>
+            </tr>
+            <tr>
+                <td><h4>Nhập điểm Giữa kỳ :</h4></td>
+                <td><input type="number" name="" id="giuaky"></td>
+            </tr>
+            <tr>
+                <td><h4>Nhập điểm Cuối kỳ :</h4></td>
+                <td><input type="number" name="" id="cuoiky"></td>
+            </tr>
+        </table>
+        <p id="ketqua"></p>
+        <input type="button" name="" onclick="star()" value="kết quả">
+    </form>
+    <script>
+        function star() {
+            let a = parseFloat(document.getElementById("kiemtra").value);
+            let b = parseFloat(document.getElementById("giuaky").value);
+            let c = parseFloat(document.getElementById("cuoiky").value);
+            let d = (c * 2 + b + a) / 4;
+            if (d < 3.5) {
+                document.getElementById("ketqua").innerText = "Loại D";
+            } else if (d < 5) {
+                document.getElementById("ketqua").innerText = "Loại C";
+            } else if (d < 7) {
+                document.getElementById("ketqua").innerText = "Loại B";
+            } else document.getElementById("ketqua").innerText = "Loại A";
+        }
+    </script>
+</body>
+</html>

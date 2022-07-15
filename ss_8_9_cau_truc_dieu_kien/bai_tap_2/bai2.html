@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Mét sang Feet</title>
+</head>
+<body>
+    <h2>Nhập met bạn muốn</h2>
+    <input type="number" name="" id="met">
+    <input type="button" name="" onclick="feet()" value="Tính Feet">
+    <h3 id="feet" style="color: blue"></h3>
+</body>
+<script>
+    function feet() {
+        let a = parseFloat(document.getElementById("met").value);
+        let b = a*3.2808;
+        if(a>0){
+            document.getElementById("feet").innerText = "Feet của bạn là : " + b;
+        }else document.getElementById("feet").innerText = "Bạn phải nhập số dương";
+
+    }
+</script>
+</html>

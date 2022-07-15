@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+    <form>
+        <h3>Nhập tuổi của bạn : <input type="text" name="" id="tuoi"></h3>
+        <p id="hien"></p>
+        <input type="button" name="" onclick="chay()" value="kiểm tra" style="background-color: #ffbc35">
+    </form>
+    <script>
+        function chay() {
+            let a = parseInt(document.getElementById("tuoi").value);
+            if (a >= 16) {
+                document.getElementById("hien").innerText = "Bạn đủ điều kiện vào học lớp 10 ";
+            } else document.getElementById("hien").innerText = "Bạn không đủ điều kiện vào học lớp 10 ";
+        }
+    </script>
+</body>
+
+</html>

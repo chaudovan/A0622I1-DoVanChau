@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("Nhập tiền lương của bạn"));
+        let b;
+        if(a>20000000){
+            b = a*10/100;
+            alert("Số tiền thuế bạn phải đóng là : " + b + " VND")
+        }else if(a>10000000){
+            b=a*5/100;
+            alert("Số tiền thuế bạn phải đóng là : " + b + " VND")
+        }else alert("Bạn không cần phải đóng thuê")
+    </script>
+</body>
+</html>

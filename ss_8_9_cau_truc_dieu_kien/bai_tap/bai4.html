@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+    <form>
+        <h3>Nhập số A :<input type="number" name="" id="soA"></h3>
+        <h3>Nhập Số B :<input type="number" name="" id = "soB"></h3>
+        <h3>Nhập Số C :<input type="number" name="" id = "soC"></h3>
+        <p id = "result"></p>
+        <input type="button" onclick="timmax()" value="Kiểm tra" style="background-color: blue">
+        <script>
+            function timmax() {
+                let a = parseInt(document.getElementById("soA").value);
+                let b = parseInt(document.getElementById("soB").value);
+                let c = parseInt(document.getElementById("soC").value);
+                if(a>b){
+                    if(a>c){
+                        document.getElementById("result").innerText  = "Mas is :" +a;
+                    }else document.getElementById("result").innerText = "Mas is :" +c;
+                }else if(b>c){
+                    document.getElementById("result").innerText = "Mas is : " +b;
+                }else document.getElementById("result").innerText = "Mas is : " +c;
+            }
+        </script>
+    </form>
+</body>
+</html>

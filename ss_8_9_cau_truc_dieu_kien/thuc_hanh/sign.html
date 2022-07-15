@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Case</title>
+</head>
+<body>
+    <script>
+        /*let a = parseInt(prompt('a?', ''));
+        switch (a) {
+            case 0:
+                alert(0);
+                break;
+            case 1:
+                alert(1);
+                break;
+            case 2:
+            case 3:
+                alert('2,3');
+                break;
+        }*/
+        let a = parseInt(prompt("nhập số :"));
+        var b = a>0 ? 1:(a<0 ? -1:0);
+        switch (b) {
+            case 1:
+                alert("1");
+                break;
+            case -1:
+                alert("-1");
+                break;
+
+            default:
+                alert("0");
+        }
+    </script>
+</body>
+</html>

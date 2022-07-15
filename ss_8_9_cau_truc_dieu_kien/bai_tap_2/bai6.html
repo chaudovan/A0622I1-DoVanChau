@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+<body>
+    <h2>Nhập số a</h2>
+    <input type="number" name="" id="soA">
+    <h2>Nhập số b</h2>
+    <input type="number" name="" id="soB">
+    <input type="button" name="" onclick="ptbac1()" value="Giải">
+    <h3 id="pt"></h3>
+    <script>
+        function ptbac1() {
+            let a = parseFloat(document.getElementById("soA").value);
+            let b = parseFloat(document.getElementById("soB").value);
+            if(a==0){
+                if(b==0){
+                    document.getElementById("pt").innerText = "Phương trình vô số nghiệm";
+                }else document.getElementById("pt").innerText = "Phương trình vô nghiệm";
+
+            }else document.getElementById("pt").innerText = "Nghiệm của pt là : " + (-b)/a;
+        }
+    </script>
+</body>
+</html>

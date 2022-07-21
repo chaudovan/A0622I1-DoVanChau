@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Tổng 20 số đầu tiên trong dãy fibonacci :<label id = "hienThi"></label></p>
+    <script>
+        let a=1;
+        let b = 0;
+        let tong;
+        let tong1;
+        for(i=1;i<21;i++){
+            tong = a;
+            a = a+b;
+            b=tong;
+            tong1 = tong +a;
+        }
+        document.write((tong1-1));
+    </script>
+</body>
+</html>

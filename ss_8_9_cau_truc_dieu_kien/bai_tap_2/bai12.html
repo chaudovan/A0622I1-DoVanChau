@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập số tiền bạn muốn mượn"));
+        let month = parseInt(prompt("nhập số tháng bạn sẽ vay"));
+        let tong = parseInt(a*Math.pow((1+0.1),month));
+        if(a,month>0){
+            alert("Số tiền bạn phải trả là :" + tong + " VND")
+        }else alert("Số tiền và tháng vay phải lớn hơn 0")
+    </script>
+</body>
+</html>

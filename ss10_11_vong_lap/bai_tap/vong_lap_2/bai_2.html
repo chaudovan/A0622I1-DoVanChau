@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        do {
+            let tong = 1;
+            let so = prompt("Nhập vào một số nguyên dương :");
+            if (so < 0) {
+                alert("Bạn phải nhập số nguyên dương!");
+            } else {
+                for (i = so; i >= 1; i--) {
+                    tong = tong * i;
+                }
+                alert("giai thừa của " + so + " là :  " + tong);
+            }
+        }while (true)
+
+    </script>
+</body>
+</html>

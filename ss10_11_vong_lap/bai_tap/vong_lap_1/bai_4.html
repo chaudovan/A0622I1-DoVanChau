@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = 1;
+        let b = 0;
+        let tong;
+        while(true){
+            tong = a;
+            a=a+b;
+            b=tong;
+            if(b%5==0){
+                document.write("số đầu tiên trong fibonacci chia hết cho 5 : " +b);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function daoNguoc(arr) {
+            let n=arr.length-1;
+            for (let i = 0; i <arr.length/2 ; i++) {
+                let a=arr[i];
+                arr[i] = arr[n];
+                arr[n] = a;
+                n--;
+            }
+            return arr;
+        }
+        let arrA = [6,2,3,4,5,8,7,9,10,11];
+        alert(daoNguoc(arrA));
+    </script>
+</body>
+</html>

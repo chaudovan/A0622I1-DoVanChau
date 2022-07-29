@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let mangB = [31,22,11,15,0,30,5,7,8,9];
+        let max=mangB[0];
+        let viTri=0;
+        for(i=1;i<mangB.length;i++){
+            if(mangB[i]>max){
+                max=mangB[i];
+                viTri=i;
+            }
+        }
+        alert("Phần tử lớn nhất trong mảng : " +max  + " Vị trí của phần tử : " +viTri);
+    </script>
+</body>
+</html>

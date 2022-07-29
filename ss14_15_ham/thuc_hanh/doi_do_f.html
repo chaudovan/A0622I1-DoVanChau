@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Fahrenteit <input type="number" id="doF" oninput="doiDo()"/></h3>
+    <h3>Celcius:  <span id="doC"></span></h3>
+    <script>
+        function doiDo() {
+            let doF = document.getElementById("doF").value;
+            let doC = (doF-32)/(1.8);
+            document.getElementById("doC").innerText  =doC;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // let arrs = ["T","h","e","Q","u","i","k","B","r","o","w","n","F","o","x"];
+        let nhap = prompt("nhập một chuổi bất kỳ :");
+        let arrs = nhap.split("");
+        console.log(arrs);
+        for(i=0;i<arrs.length;i++){
+            if(arrs[i]===arrs[i].toLowerCase()){
+                arrs[i] = arrs[i].toUpperCase();
+            }else{
+                arrs[i] = arrs[i].toLowerCase();
+            }
+        }
+        document.write(arrs.join());
+    </script>
+</body>
+</html>

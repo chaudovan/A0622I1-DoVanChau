@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiemTra(arr,str) {
+            let count =0;
+            for (let i = 0; i <arr.length ; i++) {
+                if(arr[i]==str){
+                    count++;
+                }
+            }
+            if(count==0){
+                 return -1;
+            }else{
+                alert("số lần xuất hiện của ký tự " + str + " trong mảng là " +count);
+            }
+        }
+        let arrA = ['c','h','a','u','c','c'];
+        let a=kiemTra(arrA,'c');
+        alert(a);
+    </script>
+</body>
+</html>

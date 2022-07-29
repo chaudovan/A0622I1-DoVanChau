@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        while (true) {
+            let so = +prompt("nhập vào một số");
+
+            function giaiThua(number) {
+                let tong =1;
+                for (let i = number; i > 0; i--) {
+                    tong = tong * i;
+                }
+                return tong;
+            }
+
+            if (so <= 0) {
+                alert("bạn phải nhập số lớn hơn 0");
+            } else {
+                alert("giai thừa của " + so + " là : " + giaiThua(so))
+            }
+        }
+    </script>
+</body>
+</html>

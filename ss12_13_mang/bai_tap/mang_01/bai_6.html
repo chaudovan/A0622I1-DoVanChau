@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let n=+prompt("nhập vào số phần tử trong mảng");
+        let mangA = [];
+        let kiemTra=false;
+        for(i=0;i<n;i++){
+            mangA[i] = +prompt("nhập phần tử thứ " +i +":");
+        }
+        let v = +prompt("nhập một số nguyên :");
+        for(i=0;i<mangA.length;i++){
+            if(mangA[i]==v){
+                kiemTra=true;
+            }
+        }
+        if(kiemTra==true){
+            alert("V is in the array");
+        }else {
+            alert("V ís not in the array");
+        }
+    </script>
+</body>
+</html>

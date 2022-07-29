@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="" name="" id="nameStar">
+    <button onclick="onClick()">Search</button>
+    <p id ="star"></p>
+    <script>
+        let arrStar = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        let arrConstellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        function search(str) {
+            let str1 ="";
+            for (let i = 0; i <arrStar.length ; i++) {
+                if(str==arrStar[i]){
+                    str1=arrConstellation[i];
+                }
+            }
+            if(str1==""){
+                document.getElementById("star").innerHTML ="Không có chòm sao tương ứng với tên ngôi sao bạn nhập";
+            }else {
+                document.getElementById("star").innerHTML = "Chòm sao tương ứng : " +str1;
+            }
+        }
+        function onClick() {
+            let n= document.getElementById("nameStar").value;
+            let m=search(n);
+        }
+    </script>
+</body>
+</html>

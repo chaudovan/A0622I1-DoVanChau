@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a=prompt("nhập một chuỗi bất kỳ");
+        let j=a.length-1;
+        let count=0;
+        if (a != ''){
+                if(a[0]=="" || a[j]==""){
+                    count = count;
+                }
+                if(a[0]!=""||a[j]!=""){
+                    count++;
+                    for (i = 1; i < a.length-1; i++) {
+                        if (a[i] == " ") {
+                            count++;
+                        }
+                    }
+                }
+        }
+
+        alert("số từ trong chuỗi là : " +count);
+    </script>
+</body>
+</html>

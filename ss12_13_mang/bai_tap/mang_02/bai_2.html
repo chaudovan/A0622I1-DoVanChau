@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Mảng Đầu</h3>
+    <p id="mangDau"></p>
+    <h3>Mảng Sau</h3>
+    <p id="mangSau"></p>
+    <script>
+        let mangA = ["c","s","c","2","6","1"];
+        document.getElementById("mangDau").innerText = mangA.join("*");
+        let a=mangA.length-1;
+        for(i=0;i<=a;i++){
+            let c=mangA[i];
+            mangA[i]=mangA[a];
+            mangA[a] = c;
+            a--;
+        }
+        document.getElementById("mangSau").innerText = mangA.join("");
+
+    </script>
+</body>
+</html>

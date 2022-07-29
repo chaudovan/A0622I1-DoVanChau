@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Mảng bạn nhập là </h3>
+    <p id="mangDau"></p>
+    <h3>Mảng sau khi đảo ngược</h3>
+    <p id="mangSau"></p>
+    <script>
+        let n =+prompt("nhập số phần tử cho mảng:")
+        let mangA = [];
+        for(i=0;i<n;i++){
+            mangA[i] = +prompt("giá trị phần tử " + i + " :");
+        }
+        document.getElementById("mangDau").innerText = mangA.join();
+        let a=mangA.length-1;
+        for(i=0;i<=a;i++){
+            let c=mangA[i];
+            mangA[i]=mangA[a];
+            mangA[a] = c;
+            a--;
+        }
+        document.getElementById("mangSau").innerText = mangA.join();
+
+    </script>
+</body>
+</html>

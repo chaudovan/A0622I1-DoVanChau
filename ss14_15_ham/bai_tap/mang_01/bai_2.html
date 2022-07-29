@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" name="" id="nhap">
+    <button onclick="onClick()">click</button>
+    <script>
+        function increase(number) {
+            return number+1;
+        }
+        function onClick() {
+            let n = parseInt(document.getElementById("nhap").value);
+            n = increase(n);
+            alert("giá trị của bạn đã tăng lên 1 : " +n);
+        }
+
+
+    </script>
+</body>
+</html>

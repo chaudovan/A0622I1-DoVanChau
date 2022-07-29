@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function searchMin(number1,number2,number3) {
+            let min = number1;
+            if(number2<min){
+                min=number2;
+            }else {
+                if(number3<min){
+                    min=number3;
+                }
+            }
+            return min;
+        }
+        let min = searchMin(1,3,5);
+        alert(min);
+    </script>
+</body>
+</html>

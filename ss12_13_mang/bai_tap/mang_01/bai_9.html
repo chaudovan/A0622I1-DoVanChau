@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Mảng A</h3>
+    <p id="mangA"></p>
+    <h3>Mảng B</h3>
+    <p id="mangB"></p>
+    <h3>Mảng C</h3>
+    <p id="mangC"></p>
+    <script>
+        let n = +prompt("nhập số phần tử cho mảng A");
+        let mangA = [];
+        for(i=0;i<n;i++){
+            mangA[i] = +prompt("nhập phần tử thứ " +i +" cho mảng A");
+        }
+        document.getElementById("mangA").innerText = mangA.join();
+        let m = +prompt("nhập số phần tử cho mảng B");
+        let mangB = [];
+        for(i=0;i<m;i++){
+            mangB[i] = +prompt("nhập phần tử thứ " +i +" cho mảng B");
+        }
+        document.getElementById("mangB").innerText = mangB.join();
+        let mangC = mangA.concat(mangB);
+        document.getElementById("mangC").innerText = mangC.join();
+    </script>
+</body>
+</html>

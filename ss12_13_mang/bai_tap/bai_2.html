@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" name="" id="nhap">
+    <button onclick="kiemTra()">Tra từ điển</button>
+    <p id="hienThi"></p>
+    <script>
+        let tiengAnh = ["hello","goodbye","thank you"];
+        let tiengViet =["xin chào","tạm biệt","cảm ơn"];
+        function kiemTra() {
+            let a = document.getElementById("nhap").value;
+            switch (a) {
+                case "hello":
+                    document.getElementById("hienThi").innerText = tiengViet[0];
+                    break;
+                case "goodbye":
+                    document.getElementById("hienThi").innerText = tiengViet[1];
+                    break;
+                case "thank you":
+                    document.getElementById("hienThi").innerText = tiengViet[2];
+                    break;
+                    default:
+                        document.getElementById("hienThi").innerText = "Không tìm thấy";
+
+            }
+            /*for(i=0;i<tiengAnh.length;i++){
+                if(tiengAnh[i]===a){
+                    document.getElementById("hienThi").innerText=tiengViet[i];
+                }
+            }*/
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let mangA = [13,6,7,4,8,2,9];
+        let tong=mangA[0];
+        let max =mangA[0];
+        for(i=1;i<mangA.length;i++){
+            if(mangA[i]>max){
+                max = mangA[i];
+            }
+            tong =tong+mangA[i];
+        }
+        tong = tong/mangA.length;
+        alert("max : " +max + " giá trị trung bình trong mảng : " +tong);
+    </script>
+</body>
+</html>

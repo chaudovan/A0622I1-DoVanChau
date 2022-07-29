@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <input type="number" name="tienvay" id="tienVay">
+        <input type="number" name="thangvay" id="thangVay">
+        <button onclick="tinhLai()">Tính</button>
+        <p id = "hienthi"></p>
+        <script>
+                function tinhLai() {
+                    let tienVay = parseInt(document.getElementById("tienVay").value);
+                    let thangVay = parseInt(document.getElementById("thangVay").value);
+                    let lai = 0.15;
+                    let tong;
+                    let b=0;
+                    let a,c,d;
+                    a = "<table border='1'> <tr> " + "<th>Tháng</th>" +
+                        "<th>Tổng dư nợ phải trả</th>" +
+                        "</tr>";
+                    for(i=0;i<=thangVay;i++){
+                        if(i==0){
+                            a = a + "<tr>" +
+                                "<td>0</td>" +
+
+                                "<td>" + tienVay +"</td>" +
+                                "</tr>";
+                        }else{
+                            tong = parseInt(tienVay*(Math.pow((1+lai),i))) ;
+
+                            a = a +"<tr>" +
+                                "<td>" + i +"</td>" +
+
+                                "<td>" + tong +"</td>" +
+                                "</tr>";
+                        }
+                    }
+                    a=a+ "</table>";
+                    document.getElementById("hienthi").innerHTML = a;
+                }
+
+
+        </script>
+</body>
+</html>

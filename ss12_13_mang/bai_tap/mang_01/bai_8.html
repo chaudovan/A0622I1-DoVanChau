@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Mảng vừa nhập</h3>
+    <p id="mang1"></p>
+    <h3>mảng giảm dần</h3>
+    <p id="mang2"></p>
+    <script>
+        let n=+prompt("nhập số phần tử cho mảng");
+        let mangA = [];
+        for(i=0;i<n;i++){
+            mangA[i] = +prompt("nhập giá trị phần tử thứ " +i);
+        }
+        document.getElementById("mang1").innerText = mangA.join();
+        let b;
+        for(i=0;i<mangA.length;i++){
+            for(j=0;j<mangA.length;j++){
+                if(mangA[j]<mangA[i]){
+                    b=mangA[i];
+                    mangA[i]=mangA[j];
+                    mangA[j]=b;
+                }
+            }
+        }
+        document.getElementById("mang2").innerText = mangA.join();
+        // alert(mangA);
+    </script>
+</body>
+</html>

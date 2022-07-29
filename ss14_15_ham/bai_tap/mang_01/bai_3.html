@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" name="number1" id="number1" value="số thứ nhất">
+    <input type="number" name="number2" id="number2" value="số thứ hai">
+    <button onclick="onClick()">click me</button>
+    <p id="run"></p>
+    <script>
+        function comPare(number1,number2) {
+            if(number1>number2){
+                return "số thứ nhất lớn hơn số thứ hai";
+            }else{
+                return "Tổng của hai số là : " +(number1+number2);
+            }
+        }
+        function onClick() {
+            let number1 = parseInt(document.getElementById("number1").value);
+            let number2 = parseInt(document.getElementById("number2").value);
+            let sum = comPare(number1, number2);
+            document.getElementById("run").innerHTML = sum;
+        }
+
+    </script>
+</body>
+</html>

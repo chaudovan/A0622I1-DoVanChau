@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let doC = +prompt("nhập độ C :");
+        while (doC<-273){
+            doC = +prompt("nhập lại độ C trên -273 độ");
+        }
+        let temperature = function (doC) {
+            this.doC =doC;
+            this.getDoF = function (doC) {
+                return doC*(1.8)+32;
+            }
+            this.getDoKevin = function (doC) {
+                return doC+273;
+            }
+        }
+        let doC1 = new temperature(doC);
+        alert("Độ F : " +doC1.getDoF(doC) + " Độ kevin : " +doC1.getDoKevin(doC));
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let ElectricLamp = function () {
+            this.setElectricLamp = function (lamp) {
+                this.lamp = lamp;
+            }
+            this.getElectricLamp =function () {
+                return this.lamp;
+            }
+            this.turnOn = function () {
+                alert("đèn đã được bặt");
+                this.status = true;
+            }
+            this.turnOff = function () {
+                alert("đèn đã được tắt");
+                this.status = false;
+            }
+        };
+        let SwitchButton = function () {
+            this.setSwitchButton = function (switch1) {
+                this.switch1 = switch1;
+            }
+            this.getSwitchButton = function () {
+                return this.switch1.getElectricLamp();
+            }
+            this.connectButton = function (ElectricLamp) {
+                this.ElectricLamp = ElectricLamp;
+            }
+            this.switchOn = function () {
+                this.ElectricLamp.turnOn();
+            }
+            this.switchOff =function () {
+                this.ElectricLamp.turnOff();
+            }
+        }
+        let electric = new ElectricLamp();
+        electric.setElectricLamp(10);
+        let switch1 = new SwitchButton();
+        switch1.setSwitchButton(electric);
+        switch1.connectButton(electric);
+        switch1.switchOn();
+        alert(switch1.getSwitchButton());
+        switch1.switchOff();
+        alert(switch1.getSwitchButton());
+
+    </script>
+</body>
+</html>

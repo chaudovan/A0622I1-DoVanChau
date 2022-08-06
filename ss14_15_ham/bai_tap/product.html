@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="input" value=" "/>
+<button onclick="addNewPr()" style="background-color: chartreuse">Add</button>
+<p id="show"></p>
+<script>
+    let arrProduct = [];
+
+
+    function display() {
+        let str = "<table>";
+        for (let i = 0; i <arrProduct.length ; i++) {
+            str+="<tr>";
+            str+="<td>" + (i+1) + "</td>";
+            str+="<td>" + arrProduct[i] + "</td>";
+            str+="<td><input  onclick='editPro(" + i + ")' type='button' value='Edit' style='background-color: chartreuse'/></td>";
+            str+="<td><p id='" +i+"'></p></td>"
+            str+="<td><input onclick='deletePro(" + i + ")' type='button' value='Delete' style='background-color: chartreuse'/></td>";
+            str+="</tr>";
+        }
+        str+="</table>";
+        document.getElementById("show").innerHTML=str;
+    }
+
+    function addNewPr() {
+        let str1 = document.getElementById("input").value;
+        arrProduct.push(str1);
+        display();
+        document.getElementById("input").value="";
+    }
+    function deletePro(i) {
+        arrProduct.splice(i,1);
+        display();
+    }
+    function editPro(i) {
+        let str2 ="<input type='text' id='edit' value=''/>";
+        str2 +="<button onclick='edit("+i+")'>Ok</button>";
+
+        document.getElementById(i).innerHTML = str2;
+        // arrProduct.splice(i,1,prompt("New Name "));
+        // display();
+
+    }
+
+    function edit(i) {
+        let a = document.getElementById("edit").value;
+        arrProduct[i] = a;
+        display();
+    }
+</script>
+</body>
+</html>

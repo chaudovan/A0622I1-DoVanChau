@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="display"></p>
+    <script>
+        let arr = new Array(15);
+        for (let i = 0; i <arr.length ; i++) {
+            arr[i] = new Array(15);
+            for (let j = 0; j <arr[i].length ; j++) {
+                arr[i][j]="";
+            }
+        }
+        display();
+        function display(){
+            let str = "<table border='1'>";
+            for (let i = 0; i <arr.length-3 ; i++) {
+                str +="<tr>";
+                for (let j = 0; j <arr[i].length-3 ; j++) {
+                    str+="<td onclick='play(" + i + "," + j +")' style='width:25px;height: 25px'>" + arr[i][j] + "</td>";
+                }
+                str+="</tr>";
+            }
+            str+="</table>";
+            document.getElementById("display").innerHTML = str;
+        }
+        let check1=true;
+        function kiemtra(i,j) {
+            if(arr[i][j]==""){
+                return true;
+            }
+            alert("ô này đã chọn");
+            return  false;
+        }
+        function play(i,j) {
+            if(check1 && kiemtra(i,j)) {
+                arr[i][j] = "X";
+                check1=false;
+                if(checkWin()){
+                    alert("win");
+                }
+            }else if(!check1&&kiemtra(i,j)){
+                arr[i][j]="O";
+                check1=true;
+                if(checkWin()){
+                    alert("win");
+                }
+            }
+            display();
+        }
+        function checkWin() {
+            for (let i = 0; i <arr.length ; i++) {
+                for (let j = 0; j <arr[i].length ; j++) {
+                    if (arr[i][j]=="X"){
+                        if (arr[i][j+1]=="X"&&arr[i][j+2]=="X"){
+                            return true;
+                        }
+                        if (arr[i+1][j]=="X"&&arr[i+2][j]=="X"){
+                            return true;
+                        }
+                        if (arr[i+1][j+1]=="X"&&arr[i+2][j+2]=="X"){
+                            return true;
+                        }
+                        if (arr[i+1][j-1]=="X"&&arr[i+2][j-2]=="X"){
+                            return true;
+                        }
+                    }
+                    if (arr[i][j]=="O"){
+                        if (arr[i][j+1]=="O"&&arr[i][j+2]=="O"){
+                            return true;
+                        }
+                        if (arr[i+1][j]=="O"&&arr[i+2][j]=="O"){
+                            return true;
+                        }
+                        if (arr[i+1][j+1]=="O"&&arr[i+2][j+2]=="O"){
+                            return true;
+                        }
+                        if (arr[i+1][j-1]=="O"&&arr[i+2][j-2]=="O"){
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

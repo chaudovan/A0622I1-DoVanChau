@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function isPalindrome(str) {
+            str.slice();
+            let a=true;
+            for (let i = 0; i <(str.length-1)/2 ; i++) {
+                if(str[i]!=str[str.length-1-i]){
+                    a=false;
+                }
+            }
+            return a;
+        }
+        let str = isPalindrome("assa");
+        alert(str);
+    </script>
+</body>
+</html>

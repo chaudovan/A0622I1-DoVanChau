@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="myCanvasHCN" style="border:5px solid ;" />
+    <script>
+        let Rectangle = function (longs,widths) {
+            this.longs = longs;
+            this.widths = widths;
+            this.getLongs = function () {
+                return this.longs;
+            }
+            this.getWidths = function () {
+                return this.widths;
+            }
+            this.setLongs = function (longs) {
+                this.longs=longs;
+            }
+            this.setWidths = function (widths) {
+                this.widths = widths;
+            }
+            this.area = function (longs,widths) {
+                return longs*widths;
+            }
+            this.perimeter = function (longs,widths) {
+                return (longs+widths)*2;
+            }
+            this.createRectangle = function (longs,widths) {
+                let ctx = document.getElementById("myCanvasHCN").getContext("2d");
+
+                // ctx.beginPath();
+                // ctx.rect();
+                ctx.fillStyle = "red";
+                ctx.fillRect(longs,widths,100,100)
+
+                ctx.fill();
+            }
+        }
+        let rec = new Rectangle(10,15);
+        let long = rec.getLongs();
+        let width = rec.getWidths();
+        rec.createRectangle(long,width);
+        let area =rec.area(long,width);
+        let pre = rec.perimeter(long,width);
+        alert("area : " + area + " preimeter : " + pre );
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let tienLuong1 = +prompt("nhập tiền lương nhân viên");
+        function tienLuong(tienLuong) {
+            let thue=0;
+            let luong =0;
+            while (tienLuong<0){
+                tienLuong = +prompt("nhập tiền lương không đùa");
+            }
+            if(tienLuong<7000000){
+                thue = tienLuong*5/100;
+                luong = tienLuong-thue;
+                alert("thuế bạn phải đóng : " +thue + "  Số tiền thực sự phải nhận : " +luong);
+            }else if(7000000<=tienLuong<15000000){
+                thue = tienLuong*10/100;
+                luong = tienLuong-thue;
+                alert("thuế bạn phải đóng : " +thue + " Số tiền thực sự phải nhận : " +luong);
+            }else if(tienLuong>=15000000){
+                thue = tienLuong*20/100;
+                luong = tienLuong-thue;
+                alert("thuế bạn phải đóng : " +thue + " Số tiền thực sự phải nhận : " +luong);
+            }
+        }
+        tienLuong(tienLuong1);
+    </script>
+</body>
+</html>

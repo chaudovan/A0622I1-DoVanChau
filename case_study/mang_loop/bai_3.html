@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function maxFraction(arrNumerator,arrDenominator) {
+            let max = arrNumerator[0]/arrDenominator[0];
+            let count = 0;
+            for (let i = 1; i <arrNumerator.length ; i++) {
+                if(arrNumerator[i]/arrDenominator[i]>max){
+                    max=arrNumerator[i]/arrDenominator[i];
+                    count=i;
+                }
+            }
+            return count;
+        }
+        let numerators =[5,2,5,1,3];
+        let denominators = [6,3,4,2,2];
+        let n=maxFraction(numerators,denominators);
+        alert(numerators[n]+ "/" + denominators[n] + " phân số lớn nhất và có chỉ số là : " + n);
+    </script>
+</body>
+</html>

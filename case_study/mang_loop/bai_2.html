@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function kiemTra(n,arr){
+            for (let i = 0; i <arr.length ; i++) {
+                if(arr[i]==n){
+                    return false;
+                }
+            }
+            return true;
+        }
+        function sort(arr){
+            let c=0;
+            for (let i = 0; i <arr.length ; i++) {
+                for (let j = 0; j <arr.length ; j++) {
+                    if(arr[i]<arr[j]){
+                        c=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=c;
+                    }
+                }
+            }
+            return arr;
+        }
+        let arrA = [7,2,5,3,5,3];
+        let arrB = [7,2,5,10,6,4,3,5,3,1];
+        let arrC=[];
+        let d=0;
+        for (let i = 0; i <arrB.length ; i++) {
+            if(kiemTra(arrB[i],arrA)){
+                arrC[d]=arrB[i];
+                d++;
+            }
+        }
+        //console.log(sort(arrC));
+        alert(sort(arrC));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arrA = [0,1,2,3,4,5,6,7,8,9];
+        let arrB = ["không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín"];
+        let nhapSo = prompt("nhập một số bất kỳ > 0");
+        let arrC = nhapSo.split("");
+        function hienThi(arrC) {
+            let arrD = [];
+            for (let i = 0; i <arrC.length ; i++) {
+                for (let j = 0; j <arrA.length ; j++) {
+                    if(arrC[i]==arrA[j]){
+                        arrD[i] = arrB[j];
+                    }
+                }
+            }
+            return arrD;
+        }
+        alert(hienThi(arrC).join(" "));
+
+    </script>
+</body>
+</html>

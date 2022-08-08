@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function arr(arrA,arrB) {
+            for (let i = 0; i <arrA.length ; i++) {
+                let tong=0;
+                for (let j = 0; j <=i ; j++) {
+                    tong +=arrA[j];
+                }
+                arrB[i]=tong;
+            }
+        }
+        let arrA =[1,2,3,4,5];
+        let arrB=[];
+        arr(arrA,arrB);
+        alert(arrB);
+
+    </script>
+</body>
+</html>
